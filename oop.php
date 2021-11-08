@@ -78,7 +78,7 @@
     echo $car2->getModel();
     echo $car2->getEngine();
     echo $car2->getSeat();
-    echo "<br /><br />";
+    echo "<br />";
 
     $car3 = new MPV;
     $car3->setModel("WISH");
@@ -89,5 +89,12 @@
     echo $car3->getSeat();
     echo "<br />";
 
-
+    $car4 = new Compact;
+    $car4->setModel("Myvi");
+    $car4->setEngine("900CC");
+    $car4->setSeat("5");
+    echo $car4->getModel();
+    echo $car4->getEngine();
+    echo $car4->getSeat();
+    echo "<br />";
 ?>
