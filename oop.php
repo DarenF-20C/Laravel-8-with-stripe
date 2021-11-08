@@ -78,7 +78,7 @@
     echo $car2->getModel();
     echo $car2->getEngine();
     echo $car2->getSeat();
-    echo "<br />";
+    echo "<br /><br />";
 
     $car3 = new MPV;
     $car3->setModel("WISH");
