@@ -22,3 +22,6 @@ npm install --> if not no ui display for laravel package
 npm i vue-loader --> add a loader to run 
 npm run dev --> to run npm (then test with php artisan serv)
 
+{{ asset('folder/file.xxx')}} --> to access the file wanted(.jpg .png .css)
+
+<a class="nav-link" href="{{ url('/+name')}}"> --> Hyperlink format (name found in routes file)
