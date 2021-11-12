@@ -1,13 +1,24 @@
-Viewable php file -> resources->view->XXX.blade.php
+Viewable php file --> resources->view->XXX.blade.php
 
-Controller-> app->Http
+Controller--> app->Http
 
-Database-> database->Migration
+Database--> database->Migration
 
-Model-> app->models
+Model--> app->models
 
-Web.php(route file)->routes
+Web.php(route file)-->routes
 
-.env -> set up database pw
+.env --> set up database name, pw ( line 14)
 
-photo,video,audio place in public, only file in public can be viewed by users
+photo,video,audio -->place in public, only file in public can be viewed by users
+
+php artisan migrate --> copy the table in migration into db
+
+composer require laravel/ui --> install UI package
+
+php artisan ui vue --auth --> add Auth UI into controller
+
+npm install --> if not no ui display for laravel package
+npm i vue-loader --> add a loader to run 
+npm run dev --> to run npm (then test with php artisan serv)
+
