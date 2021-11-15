@@ -25,3 +25,8 @@ npm run dev --> to run npm (then test with php artisan serv)
 {{ asset('folder/file.xxx')}} --> to access the file wanted(.jpg .png .css)
 
 <a class="nav-link" href="{{ url('/+name')}}"> --> Hyperlink format (name found in routes file)
+
+
+!!!!NEXT WEEK!!!!
+
+make a model --> php artisan make:model NAME -m (-m migraiton automatically)
