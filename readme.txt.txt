@@ -27,6 +27,10 @@ npm run dev --> to run npm (then test with php artisan serv)
 <a class="nav-link" href="{{ url('/+name')}}"> --> Hyperlink format (name found in routes file)
 
 
-!!!!NEXT WEEK!!!!
+15/11/21
 
 make a model --> php artisan make:model NAME -m (-m migraiton automatically)
+fill in Migration file with fillable vairable --> $table->string('name');
+push to databse? --> php artisan migrate
+
+go model file to set fillable & relationship between table --> hasMany / belongsTo
