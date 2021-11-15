@@ -21,6 +21,9 @@ Route::get('/addCategory',function() {
     return view('addCategory');
 });
 
+Route::get('/addProduct',function() {
+    return view('addProduct');
+});
 
 Auth::routes();
 
