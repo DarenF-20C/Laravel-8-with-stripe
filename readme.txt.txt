@@ -34,3 +34,6 @@ fill in Migration file with fillable vairable --> $table->string('name');
 push to databse? --> php artisan migrate
 
 go model file to set fillable & relationship between table --> hasMany / belongsTo
+
+add "addCategory" page(.blade.php) --> write with extends template
+add "addCategory" into Routes file (so the blade.php can run) --> Route::get...
