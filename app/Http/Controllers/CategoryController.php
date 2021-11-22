@@ -10,9 +10,9 @@ class CategoryController extends Controller
 {
     public function add(){
         $r=request(); //receive data from GET / POST method  $_POST['name']
-        $addCategory=Category::create([
+        $addCategory=Category::create([  //pre-define function in DB 
             'name'=>$r->categoryName,
-        ]); //pre-define function in DB 
+        ]); 
         return view('addCategory'); 
     }
 }

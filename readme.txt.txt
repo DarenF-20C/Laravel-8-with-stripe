@@ -49,3 +49,15 @@ go blade.php set action & @CSRF--><form action="{{route('addCategory')}}" method
 @CSRF -> to prevent double input data & ensure data come only from this folder, no outsider
 
 add route in web.php with post method -->Route::post('/addCategory/store',[App\Http\Controller\CategoryController::class,'add'])->name('addCategory');
+
+
+22/11/2021
+
+insert product with image, and create view page for category & product
+create productController --> php artisan make:controller productController
+edit productController
+set the form action,method & enctype
+set the routes same like CategoryController
+
+
+View
