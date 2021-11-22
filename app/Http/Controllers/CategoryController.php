@@ -13,6 +13,12 @@ class CategoryController extends Controller
         $addCategory=Category::create([  //pre-define function in DB 
             'name'=>$r->categoryName,
         ]); 
-        return view('addCategory'); 
+        Return view('addCategory'); 
+    }
+
+    public function view(){
+        $viewCategory = Category::all(); //auto generate SQL select*from categories
+        Return view('showCategory')->with('categories',$viewCategory);
+        //categories use for @foreach in blade.php
     }
 }

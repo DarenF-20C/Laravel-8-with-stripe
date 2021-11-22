@@ -61,3 +61,4 @@ set the routes same like CategoryController
 
 
 View
+-interface, routes, controller

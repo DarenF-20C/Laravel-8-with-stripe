@@ -26,6 +26,6 @@ class ProductController extends Controller
             'image'=>$imageName, //save the image name only.
             //image different
         ]);  
-        return view('addProduct'); 
+        Return view('addProduct'); 
     }
 }
