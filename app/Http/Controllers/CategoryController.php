@@ -13,7 +13,7 @@ class CategoryController extends Controller
         $addCategory=Category::create([  //pre-define function in DB 
             'name'=>$r->categoryName,
         ]); 
-        Return view('addCategory'); 
+        Return redirect()->route('showCategory'); 
     }
 
     public function view(){

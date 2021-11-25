@@ -26,6 +26,17 @@ class ProductController extends Controller
             'image'=>$imageName, //save the image name only.
             //image different
         ]);  
-        Return view('addProduct'); 
+        return redirect()->route('showProduct'); 
+    }
+
+    public function view(){
+        //$viewProduct=Product::all();
+        $viewProduct=DB::table('products')
+        ->leftjoin('categories','categories.id','=','products.CategoryID')
+        ->select('products.*','categories.name as categoryName')
+        ->get();
+
+        return view('showProduct')->with('products',$viewProduct);
     }
 }
+
