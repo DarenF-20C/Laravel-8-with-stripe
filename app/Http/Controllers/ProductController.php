@@ -22,7 +22,7 @@ class ProductController extends Controller
             'description'=>$r->productDescription,
             'price'=>$r->productPrice,
             'quantity'=>$r->productQuantity,
-            'CategoryID'=>$r->categoryID,
+            'CategoryID'=>$r->CategoryID,
             'image'=>$imageName, //save the image name only.
             //image different
         ]);  
@@ -32,8 +32,9 @@ class ProductController extends Controller
 
     public function view(){
         //$viewProduct=Product::all();
-        $viewProduct=DB::table('products')
-        ->leftjoin('categories','categories.id','=','products.CategoryID')
+
+        $viewProduct=DB::table('products') //select everything from table
+        ->leftjoin('categories','categories.id','=','products.CategoryID') 
         ->select('products.*','categories.name as categoryName')
         ->get();
 

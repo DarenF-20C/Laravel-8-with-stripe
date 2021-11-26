@@ -30,7 +30,13 @@
             </div>
             <div class="form-group">
                 <label for="categoryID">Product Category</label>
-                <input type="text" class="form-control" id="categoryID" name="categoryID">
+                <!--<input type="text" class="form-control" id="categoryID" name="categoryID"> -->
+                <select name="CategoryID" id="CategoryID" class="form-control">
+                    @foreach($categoryID as $category)
+                        <!--show name, pass id-->
+                        <option value="{{$category->id}}">{{$category->name}}</option>                    
+                    @endforeach
+                </select>
             </div>
             <button type="submit" class="btn btn-primary">Add Product</button>
         </form>

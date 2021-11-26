@@ -22,7 +22,7 @@ Route::get('/addCategory',function() {
 });
 
 Route::get('/addProduct',function() {
-    return view('addProduct');
+    return view('addProduct',['categoryID'=>App\Models\Category::all()]); //get All data and pass to addProduct page as variable(categoryID)
 });
 
 Route::post('/addCategory/store',[App\Http\Controllers\CategoryController::class,'add'])->
