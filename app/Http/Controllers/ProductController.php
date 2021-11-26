@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use App\Models\Product;
+use Session;
 
 class ProductController extends Controller
 {
@@ -16,7 +17,6 @@ class ProductController extends Controller
         $image->move('images',$image->getClientOriginalName());
         $imageName=$image->getClientOriginalName();
 
-
         $addProduct=Product::create([ //pre-define function in DB
             'name'=>$r->productName,
             'description'=>$r->productDescription,
@@ -26,6 +26,7 @@ class ProductController extends Controller
             'image'=>$imageName, //save the image name only.
             //image different
         ]);  
+        Session::flash('success',"Product create successfully!");
         return redirect()->route('showProduct'); 
     }
 

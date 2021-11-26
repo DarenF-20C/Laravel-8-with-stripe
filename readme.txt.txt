@@ -62,3 +62,18 @@ set the routes same like CategoryController
 
 View
 -interface, routes, controller
+
+SAME WEEK (26/11/21)
+(Session) not like pop-up message
+Cookies - record user behaviour, action
+
+Import session --> use Session;
+Declare in function before return--> Session::flash('sessionName',"sessionMessage");
+define session in layout.blade in <body>-->
+    @if(Session::has('success'))
+      <div class="alert alert-success">
+        {{ Session::get('success')  }}
+      </div>
+    @endif
+
+
