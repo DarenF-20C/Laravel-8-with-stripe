@@ -77,3 +77,8 @@ define session in layout.blade in <body>-->
     @endif
 
 
+DELETE 
+href for delete --> href="{{ route('deleteProduct',['id'=>$product->id]) }}"
+onclick confirmation to user --> return confirm('message')
+route (get)--> Route::get('/deleteProduct/{id}',[App\Http\Controllers\ProductController::class,'delete'])->
+name('deleteProduct');

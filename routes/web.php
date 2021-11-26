@@ -37,6 +37,8 @@ name('showCategory');
 Route::get('/showProduct',[App\Http\Controllers\ProductController::class,'view'])->
 name('showProduct');
 
+Route::get('/deleteProduct/{id}',[App\Http\Controllers\ProductController::class,'delete'])->
+name('deleteProduct');
 
 Auth::routes();
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB; //database
 use App\Models\Category;
+use Session;
 
 class CategoryController extends Controller
 {
@@ -13,6 +14,7 @@ class CategoryController extends Controller
         $addCategory=Category::create([  //pre-define function in DB 
             'name'=>$r->categoryName,
         ]); 
+        Session::flash('success',"Category create successfully!");
         Return redirect()->route('showCategory'); 
     }
 
