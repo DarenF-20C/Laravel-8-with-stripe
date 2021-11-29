@@ -90,3 +90,6 @@ Product EDIT
 create interface blade.php --> add hidden input and add default value for each field
 create route similar to deleteProduct --> function 'edit'
 create 'edit' function on controller --> get info based on id to display edit form
+
+update after confirm edit 
+route
