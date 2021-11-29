@@ -40,6 +40,9 @@ name('showProduct');
 Route::get('/deleteProduct/{id}',[App\Http\Controllers\ProductController::class,'delete'])->
 name('deleteProduct');
 
+Route::get('/editProduct/{id}',[App\Http\Controllers\ProductController::class,'edit'])->
+name('editProduct');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

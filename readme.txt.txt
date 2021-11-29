@@ -82,3 +82,11 @@ href for delete --> href="{{ route('deleteProduct',['id'=>$product->id]) }}"
 onclick confirmation to user --> return confirm('message')
 route (get)--> Route::get('/deleteProduct/{id}',[App\Http\Controllers\ProductController::class,'delete'])->
 name('deleteProduct');
+
+
+29/11/21
+Product EDIT
+
+create interface blade.php --> add hidden input and add default value for each field
+create route similar to deleteProduct --> function 'edit'
+create 'edit' function on controller --> get info based on id to display edit form

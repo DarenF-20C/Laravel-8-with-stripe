@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use App\Models\Product;
+use App\Models\Category;
 use Session;
 
 class ProductController extends Controller
@@ -47,6 +48,13 @@ class ProductController extends Controller
 
         Session::flash('success',"Product was deleted successfully!");
         return redirect()->route('showProduct');
+    }
+
+    public function edit($id){
+        $products=Product::all()->where('id',$id);
+        return view('editProduct')
+        ->with('products',$products)
+        ->with('categoryID',Category::all());
     }
 }
 
