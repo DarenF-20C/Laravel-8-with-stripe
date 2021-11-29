@@ -28,7 +28,7 @@
                 <input type="number" class="form-control" id="productQuantity" name="productQuantity" value="{{ ($product->quantity) }}">
             </div>
             <div class="form-group">
-                <label for="productImage">Product Image</label>
+                <label for="productImage">Product Image</label><br>
                 <img src="{{ asset('images')}}/{{$product->image}}" alt="productImage" class="img-fluid" width="100">
                 <input type="file" class="form-control" id="productImage" name="productImage">
             </div>
