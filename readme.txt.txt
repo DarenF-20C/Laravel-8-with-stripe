@@ -93,3 +93,11 @@ create 'edit' function on controller --> get info based on id to display edit fo
 
 update after confirm edit 
 route
+
+SAME WEEK 3/12/2021
+
+DisplayProductDetail for user
+create a blade.php first
+set route (similar to delete product, get ID)
+create function inside controller 
+set foreach ($products as $product) and set ALL related detail {{$product->}}
