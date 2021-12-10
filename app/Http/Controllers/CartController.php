@@ -26,6 +26,16 @@ class CartController extends Controller
             'orderID'=>'',
         ]);
         Session::flash('success',"Product added into Cart!");
-        return redirect()->route('showProduct');
+        return redirect()->route('show.my.cart');
+    }
+
+    public function showMyCart(){
+        $carts=DB::table('my_carts')
+        ->leftjoin('products','products.id','=','my_carts.productID')
+        ->select('my_carts.quantity as cartQTY','my_carts.id as cid','products.*')
+        ->where('my_carts.orderID','=','') //if '' means no payment made
+        ->where('my_carts.userID','=',Auth::id())
+        ->get();
+        return view('myCart')->with('carts',$carts);
     }
 }
