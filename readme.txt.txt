@@ -101,3 +101,15 @@ create a blade.php first
 set route (similar to delete product, get ID)
 create function inside controller 
 set foreach ($products as $product) and set ALL related detail {{$product->}}
+
+
+10/12/2021
+MAKE myCart & add to cart 
+
+make:model for myCart with -m
+edit migration file and migrate
+edit protected fillable in model file & relationship between mycart and product+user
+
+edit productDetail.blade --> add form action for passing detail to myCart
+edit CartController --> userID use Auth::id() require login first
+add a __construct function --> redirect to login page before add to myCart
