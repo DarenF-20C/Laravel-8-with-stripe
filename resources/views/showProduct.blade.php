@@ -6,8 +6,8 @@
         <br><br>
         <table class="table table-bordered">
             <thead>
-                <tr>
-                    <td>ID</td>
+                <tr style="text-align: center; font-weight: bold;">
+                    <!-- <td>ID</td> -->
                     <td>Image</td>
                     <td>Product Name</td>
                     <td style="width:250px">Description</td>
@@ -20,8 +20,8 @@
 
             <tbody>
                 @foreach($products as $product)
-                <tr>
-                    <td>{{$product->id}}</td>
+                <tr style="text-align: center;">
+                    <input type="hidden" name="id" value="{{$product->id}}">
                     <td><img src="{{ asset('images/'.$product->image) }}" alt="product image" title="product image" width="100" class="img-fluid"></td>
                     <td>{{$product->name}}</td>
                     <td>{{$product->description}}</td>

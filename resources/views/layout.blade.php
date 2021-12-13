@@ -31,7 +31,7 @@
           <a class="nav-link" href="{{ url('/')}}">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="{{ url('/showProduct')}}">Products</a>
+        <a class="nav-link" href="{{ url('/viewProducts')}}">Products</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -50,7 +50,7 @@
         <input class="form-control mr-sm-2" name="keyword" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>&nbsp;
-      <button type="button" class="btn btn-success">
+      <button type="button" class="btn btn-success" >
         My Cart <span class="badge bg-danger">1</span>
       </button>
     </div>

@@ -38,4 +38,12 @@ class CartController extends Controller
         ->get();
         return view('myCart')->with('carts',$carts);
     }
+
+    public function delete($id){
+        $delete=myCart::find($id);
+        $delete->delete();
+
+        Session::flash('success',"Product was deleted successfully!");
+        return redirect()->route('show.my.cart');
+    }
 }

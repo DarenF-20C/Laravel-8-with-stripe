@@ -113,3 +113,7 @@ edit protected fillable in model file & relationship between mycart and product+
 edit productDetail.blade --> add form action for passing detail to myCart
 edit CartController --> userID use Auth::id() require login first
 add a __construct function --> redirect to login page before add to myCart
+
+
+13/12/2021 (new week)
+add image , subtotal, action column for my Cart 
