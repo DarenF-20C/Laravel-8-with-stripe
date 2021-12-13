@@ -116,4 +116,10 @@ add a __construct function --> redirect to login page before add to myCart
 
 
 13/12/2021 (new week)
-add image , subtotal, action column for my Cart 
+add image , subtotal, action column for my Cart
+
+Calculate subtotal of myCart
+-->prepare last row for subtotal calculation
+--> apply Checkbox, input with Javascript calling
+--> define ajax script <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+--> write javascript on top of page
