@@ -10,6 +10,7 @@
         for(var i=0; i<length; i++){
             if(cBox[i].checked){
                 subtotal=parseFloat(names[i].value)+parseFloat(subtotal);
+                // console.log(subtotal); to show in console in Inspect
             }
         }
         document.getElementById('sub').value=subtotal.toFixed(2);

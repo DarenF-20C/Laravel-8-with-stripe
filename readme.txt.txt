@@ -123,3 +123,6 @@ Calculate subtotal of myCart
 --> apply Checkbox, input with Javascript calling
 --> define ajax script <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 --> write javascript on top of page
+
+Backend-->test js
+rightClick -> Inspect -> console
