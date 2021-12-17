@@ -138,7 +138,7 @@ rightClick -> Inspect -> console
 STRIPE_KEY=
 STRIPE_SECRET=
 
-3) set config (connection) at bottom
+3) set config\service.php (connection) at bottom
 'stripe' => [
      		'secret' => env('STRIPE_SECRET'),
 	],
@@ -153,4 +153,9 @@ Route::post('\checkout', [App\Http\Controllers\PaymentController::class, 'paymen
 
 7) add use Stripe; (use stripe library) & add paymentPost function
 
-8) prepare UI (.blade.php)
+8) prepare UI (at Stripe ui into myCart.blade.php) ui+script
+
+9) test with testing card from Stripe
+https://stripe.com/docs/terminal/references/testing
+
+10) continue next week~
