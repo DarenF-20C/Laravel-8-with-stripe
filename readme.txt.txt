@@ -126,3 +126,31 @@ Calculate subtotal of myCart
 
 Backend-->test js
 rightClick -> Inspect -> console
+
+
+17/12/2021 
+------------------------------------------------------------------------------------------------------
+-------------------------------------------STRIPE - SET UP -------------------------------------------
+------------------------------------------------------------------------------------------------------
+
+1) composer require stripe/stripe-php (install stripe through composer) 
+2) edit env. --> add public key&secret key (find on Stripe dashboard)
+STRIPE_KEY=
+STRIPE_SECRET=
+
+3) set config (connection) at bottom
+'stripe' => [
+     		'secret' => env('STRIPE_SECRET'),
+	],
+
+4) set route
+Route::post('\checkout', [App\Http\Controllers\PaymentController::class, 'paymentPost'])->name('payment.post');
+
+5) find vendor/stripe folder
+
+6) add PaymentController
+-> php artisan make:controller PaymentController
+
+7) add use Stripe; (use stripe library) & add paymentPost function
+
+8) prepare UI (.blade.php)
