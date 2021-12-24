@@ -133,7 +133,7 @@ rightClick -> Inspect -> console
 -------------------------------------------STRIPE - SET UP -------------------------------------------
 ------------------------------------------------------------------------------------------------------
 
-1) composer require stripe/stripe-php (install stripe through composer) 
+1)!!! composer require stripe/stripe-php (install stripe through composer) !!! 
 2) edit env. --> add public key&secret key (find on Stripe dashboard)
 STRIPE_KEY=
 STRIPE_SECRET=
@@ -159,3 +159,18 @@ Route::post('\checkout', [App\Http\Controllers\PaymentController::class, 'paymen
 https://stripe.com/docs/terminal/references/testing
 
 10) continue next week~
+
+
+24/12/2021 New Week
+after payment, create new order & update the cart item
+
+1. new model - myOrder with -make
+2. add table column for myOrder table in "migration", edit fillable and state relation in "myOrder" model
+3. migrate it to phpmyadmin
+
+4. addmore line in PaymentController --> create order when payment done, get orderID, bind the orderID to each item paid
+
+5.create myOrder on your own
+(new blade.php, function, route)
+
+

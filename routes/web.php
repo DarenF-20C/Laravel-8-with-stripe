@@ -64,6 +64,9 @@ name('delete.cart.item');
 Route::post('\checkout', [App\Http\Controllers\PaymentController::class, 'paymentPost'])->
 name('payment.post');
 
+Route::get('/myOrder',[App\Http\Controllers\PaymentController::class,'viewOrder'])->
+name('my.order');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
