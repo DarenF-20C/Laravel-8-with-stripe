@@ -174,3 +174,23 @@ after payment, create new order & update the cart item
 (new blade.php, function, route)
 
 
+27/12/2021 New Week
+Notification (mailtrap.io)
+
+1. register mailtrap
+edit the action of inbox -> laravel 7+
+replace the detail into .env file
+edit --> MAIL_FROM_ADDRESS = sender address
+
+2. php artisan make:notification orderPaid --> generate App\notification\orderPaid
+
+3. use Notification;
+edit controller --> define receiver email, define notification file location and pass email.
+
+4. edit orderPaid -> toMail function --> customize the email details.
+
+
+Pagination
+-->function inside controller
+-->interface
+
