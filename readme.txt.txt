@@ -192,5 +192,13 @@ edit controller --> define receiver email, define notification file location and
 
 Pagination
 -->function inside controller
--->interface
+change ->get(); to ->paginate(5);
 
+-->interface (.blade.php)
+apply bootstrap-4 pagination
+{{  $carts->links('pagination::bootstrap-4')  }}
+
+Search Function (use.viewProduct as result page)
+--> add new route for search function
+--> edit route in layout.blade for search
+--> add search function in ProductController using SQL statement

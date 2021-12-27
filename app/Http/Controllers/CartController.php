@@ -35,7 +35,9 @@ class CartController extends Controller
         ->select('my_carts.quantity as cartQTY','my_carts.id as cid','products.*')
         ->where('my_carts.orderID','=','') //if '' means no payment made
         ->where('my_carts.userID','=',Auth::id())
-        ->get();
+        //->get();
+        ->paginate(5); //five item in one page only
+
         return view('myCart')->with('carts',$carts);
     }
 

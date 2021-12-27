@@ -88,4 +88,14 @@ class ProductController extends Controller
 
         return view('productDetail')->with('products',$products);
     }
+
+    public function searchProduct(){
+        $r=request();
+        $keyword=$r->keyword;
+        $products=DB::table('products')
+        ->where('name','like','%'.$keyword.'%')
+        ->get();
+
+        return view('viewProducts')->with('products',$products);
+    }
 }
