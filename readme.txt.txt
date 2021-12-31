@@ -202,3 +202,25 @@ Search Function (use.viewProduct as result page)
 --> add new route for search function
 --> edit route in layout.blade for search
 --> add search function in ProductController using SQL statement
+
+
+31/12/2021 SAME week
+Generate PDF file
+//generate by using php is limited ((no much css for php generate pdf
+//!!asp.net!! can integrate it with existing library
+
+
+1. composer require barryvdh/laravel-dompdf
+2. add on into config\app.php --> 
+provider part
+  -->  Barryvdh\DomPDF\ServiceProvider::class,
+
+aliasses part
+  -->  'PDF'  => \Barryvdh\DomPDF\Facades::class,
+
+3. add route --> Route::get('/pdfReport',[App\Http\Controllers\PDFController::class,'pdfReport'])->name('pdfReport');
+4. run terminal to create controller for pdf --> PDFController
+5. import --> use PDF (defined in app.php) and others
+6. add function to controller
+
+7. create basic report using html for pdf

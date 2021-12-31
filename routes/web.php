@@ -70,6 +70,10 @@ name('payment.post');
 Route::get('/myOrder',[App\Http\Controllers\PaymentController::class,'viewOrder'])->
 name('my.order');
 
+Route::get('/pdfReport',[App\Http\Controllers\PDFController::class,'pdfReport'])->
+name('pdfReport');
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

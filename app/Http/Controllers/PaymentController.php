@@ -54,6 +54,7 @@ class PaymentController extends Controller
         //define notification file location and pass email.
         Notification::route('mail',$email)->notify(new \App\Notifications\orderPaid($email));
 
+        
         Session::flash('success','Order successfully!');
         return back();
         //return redirect()->route('my.order');

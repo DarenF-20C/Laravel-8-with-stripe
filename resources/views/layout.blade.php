@@ -50,7 +50,7 @@
         <input class="form-control mr-sm-2" name="keyword" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>&nbsp;
-      <button type="button" class="btn btn-success" >
+      <button type="button" action="{{route('show.my.cart')}}" class="btn btn-success" >
         My Cart <span class="badge bg-danger">1</span>
       </button>
     </div>
