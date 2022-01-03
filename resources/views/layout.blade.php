@@ -38,8 +38,8 @@
             Category
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Phone</a>
-            <a class="dropdown-item" href="#">Desktops/Laptop</a>
+            <a class="dropdown-item" href="{{route('phone.products')}}" method="POST">Phone</a>
+            <a class="dropdown-item" href="{{route('comp.products')}}">Desktops/Laptop</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Computer Hardware</a>
           </div>

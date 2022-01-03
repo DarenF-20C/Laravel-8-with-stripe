@@ -224,3 +224,12 @@ aliasses part
 6. add function to controller
 
 7. create basic report using html for pdf
+
+
+3/1/2021 (New Year~)
+hyperlink for sort product by category when clicking in navbar
+Category->phone / desktop navigation
+
+count item when user login
+-->after login update item in cart to top-right
+

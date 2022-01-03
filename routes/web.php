@@ -73,6 +73,16 @@ name('my.order');
 Route::get('/pdfReport',[App\Http\Controllers\PDFController::class,'pdfReport'])->
 name('pdfReport');
 
+Route::post('/products',[App\Http\Controllers\ProductController::class,'searchProduct'])->
+name('search.product');
+
+Route::get('/phone',[App\Http\Controllers\ProductController::class,'viewPhone'])->
+name('phone.products');
+
+Route::get('/desk+lap',[App\Http\Controllers\ProductController::class,'viewComputer'])->
+name('comp.products');
+
+
 
 Auth::routes();
 
