@@ -232,4 +232,4 @@ Category->phone / desktop navigation
 
 count item when user login
 -->after login update item in cart to top-right
-
+1. apply @guest @else @endguest to hold login & not login user

@@ -50,9 +50,18 @@
         <input class="form-control mr-sm-2" name="keyword" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>&nbsp;
-      <button type="button" action="{{route('show.my.cart')}}" class="btn btn-success" >
-        My Cart <span class="badge bg-danger">1</span>
+      @guest 
+      <button type="button" class="btn btn-success" onClick="window.location.href='{{route('show.my.cart')}}'">My Cart</button>
+      @else 
+      <button type="button" class="btn btn-success" onClick="window.location.href='{{route('show.my.cart')}}'">
+        My Cart 
+        <span class="badge bg-danger">
+          @foreach($noItem as $c)
+            {{$c->count_item}}
+          @endforeach
+        </span>
       </button>
+      @endguest
     </div>
   </nav>
 
