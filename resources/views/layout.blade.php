@@ -1,3 +1,8 @@
+<?php
+use App\Models\Product;
+$cartCount = Product::cartCount();
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -56,9 +61,9 @@
       <button type="button" class="btn btn-success" onClick="window.location.href='{{route('show.my.cart')}}'">
         My Cart 
         <span class="badge bg-danger">
-          @foreach($noItem as $c)
-            {{$c->count_item}}
-          @endforeach
+        @foreach($cartCount as $count)
+          {{$count}}
+        @endforeach 
         </span>
       </button>
       @endguest
