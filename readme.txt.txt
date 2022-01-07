@@ -253,3 +253,7 @@ Method 1
 Method 2
 Direct declare and call -->
 App('App\Http\Controllers\CartController')->cartItem();
+
+
+!!! Limit the access of adding product and category to specific user/admin
+
