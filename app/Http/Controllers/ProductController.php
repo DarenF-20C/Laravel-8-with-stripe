@@ -80,6 +80,9 @@ class ProductController extends Controller
 
     public function viewProduct(){
         $products=Product::all();
+
+        (new CartController)->cartItem(); //declared namespace, auto find in controllers folder
+        // App('App\Http\Controllers\CartController')->cartItem();
         return view('viewProducts')->with('products',$products);
     }
 

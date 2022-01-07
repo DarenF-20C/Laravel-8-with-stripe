@@ -233,3 +233,23 @@ Category->phone / desktop navigation
 count item when user login
 -->after login update item in cart to top-right
 1. apply @guest @else @endguest to hold login & not login user
+
+
+7/1/2021 (same Week)
+Apply session to pass value to any page
+
+//assign cartItem value to Session variable,
+//layout can retrieve the value from session variable to display in all pages
+Assign-->    Session::put('cartItem',$cartItem);
+Retrieve-->  {{ Session::get('cartItem') }}
+(Session::put = Session()->put)
+
+
+Call the function in other controller
+Method 1
+1) make sure declared on top--> namespace App\Http\Controllers;
+2) (new CartController)->cartItem();
+
+Method 2
+Direct declare and call -->
+App('App\Http\Controllers\CartController')->cartItem();
