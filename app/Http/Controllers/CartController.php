@@ -52,18 +52,24 @@ class CartController extends Controller
     }
 
     //((update when)) login, view cart, add/delete cart, make payment 
-    public function cartItem(){
-        $noItem=DB::table('my_carts')
-        ->leftjoin('products','products.id','=','my_carts.productID')
-        ->select(DB::raw('COUNT(*) as count_item'))
-        ->where('my_carts.orderID','=','') //if '' means no payment made
-        ->where('my_carts.userID','=',Auth::id())
-        ->groupBy('my_carts.userID')
-        ->first();
 
-        //assign cartItem value to Session variable,
-        //layout can retrieve the value from session variable to display in all pages
-        $cartItem = $noItem->count_item;
-        Session::put('cartItem',$cartItem);
+    public function cartItem(){
+        if(Auth::id()!=""){ //skip if guest with no Auth id
+            $noItem=DB::table('my_carts')
+            ->leftjoin('products','products.id','=','my_carts.productID')
+            ->select(DB::raw('COUNT(*) as count_item'))
+            ->where('my_carts.orderID','=','') //if '' means no payment made
+            ->where('my_carts.userID','=',Auth::id())
+            ->groupBy('my_carts.userID')
+            ->first();
+
+            //assign cartItem value to Session variable,
+            //layout can retrieve the value from session variable to display in all pages
+
+            //if $noItem is done {...}, else {assign '0'}
+            if($noItem){ $cartItem = $noItem->count_item; }
+                else{ $cartItem = '0'; }
+            Session::put('cartItem',$cartItem);
+        }
     }
 }

@@ -255,5 +255,12 @@ Direct declare and call -->
 App('App\Http\Controllers\CartController')->cartItem();
 
 
+
+14/1/22 New Week
+Error occur when new user / guest view products page.
+Error -->count_item is non-object
+apply if to check--> Auth::id() , and $noItem not empty
+
+
 !!! Limit the access of adding product and category to specific user/admin
 
