@@ -263,4 +263,5 @@ apply if to check--> Auth::id() , and $noItem not empty
 
 
 !!! Limit the access of adding product and category to specific user/admin
-
+Long term="https://learn2torials.com/a/laravel-authentication-based-on-roles"
+Short term = apply if else 

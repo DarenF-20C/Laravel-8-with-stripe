@@ -42,6 +42,10 @@ class ManageProductController extends Controller
 
     public function view(){
         //$viewProduct=Product::all();
+        if(Auth::id()!=1){
+            Session::flash('success','Admin only allow to access this page!');
+            return redirect(route('viewProducts'));
+        }
 
         $viewProduct=DB::table('products') //select everything from table
         ->leftjoin('categories','categories.id','=','products.CategoryID') 
