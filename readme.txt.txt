@@ -265,3 +265,10 @@ apply if to check--> Auth::id() , and $noItem not empty
 !!! Limit the access of adding product and category to specific user/admin
 Long term="https://learn2torials.com/a/laravel-authentication-based-on-roles"
 Short term = apply if else 
+
+
+Publish
+-> aeon free active account.
+-> create and import database (export database from localhost first)
+-> edit .env file before upload (Username, HostName, DB Name, Password)
+-> upload via FTP (Filezilla)
